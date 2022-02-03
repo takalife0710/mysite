@@ -132,8 +132,13 @@ header{
 /* nav_box の中に含まれるボタン */
 .nav_button{
     display: inline-flex;
+    margin:0;
     padding: 5px 5px 5px 12px;
-
+    
     cursor: pointer;
     border-width: 0px;
+    border-radius: 21px;
+    height: 48px;
+
+    align-items:center;
 }
