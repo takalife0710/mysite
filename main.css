@@ -1,0 +1,139 @@
+/*
+ * タグが持つスタイルをリセット
+ */
+body{
+    padding:0;
+    margin:0;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+}
+
+/* ヘッダ部分の領域 */
+.control_bar{
+    height:80px;
+    background-color: lightgray;
+
+    padding: 0 80px 0 80px;
+
+    display:flex;
+    justify-content: center;
+}
+
+/* ヘッダ内の左右のコンテンツ配置領域 
+    flex で縦方向に中央揃え
+*/
+.side_box{
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ヘッダ内の中央のコンテンツ配置領域（メニューボタンがあるところ）
+    flex で縦方向に中央揃え
+ */
+.center_box{
+    width: 100%;
+    background-color: gold;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* ロゴを入れる箱
+    flex で横方向に左から置いていく
+*/
+.logo_box{
+    background-color: lightpink;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+/* メニューを入れる箱
+    flex で横方向に中央揃え
+*/
+.menu_box{
+    text-align: center;
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu_button{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px  16px;
+
+    cursor: pointer;
+    text-align: inherit;
+
+    border-width: 0px;
+    border-style: solid;
+    /* background: transparent; */
+}
+
+/* ナビを入れる箱
+    flex で右寄せに配置
+*/
+.nav_box{
+    background-color: lightpink;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+/* nav_box の中に含まれるリンク */
+.nav_link{
+    display: inline-block;
+    padding: 12px;
+    text-decoration:none;
+    position: relative;
+}
+
+/* nav_link をホバーした時に背景色を付けるためにコンテンツを差し込み
+
+　　なぜ、この方法が良いのかは勉強不足のため不明
+*/
+.nav_link::before{
+    border-radius: 22px;
+    content: "";    
+}
+.nav_link:hover::before{
+    background-color: rgba(255, 255, 255, 0.15);
+    position:absolute;
+    top:0px;
+    left:-3px;
+    right:-3px;
+    bottom: 0px;
+    z-index: 0;
+}
+
+/* nav_box の中に含まれるボタンを入れる箱
+    Header内で縦方向に中央揃え
+*/
+.nav_button_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* nav_box の中に含まれるボタン */
+.nav_button{
+    display: inline-flex;
+    padding: 5px 5px 5px 12px;
+
+    cursor: pointer;
+    border-width: 0px;
+}
