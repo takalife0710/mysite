@@ -142,3 +142,8 @@ header{
 
     align-items:center;
 }
+
+.avatar_icon{
+    height: 30px;
+    margin-left:12px;
+}
